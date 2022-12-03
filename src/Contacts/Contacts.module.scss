@@ -1,0 +1,34 @@
+@import "src/Common/Styles/sass/variables";
+
+.contactsBlock {
+    background-color: $bgSecondColor;
+
+    .contactsContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .contactsForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            background-color: lightpink;
+
+            .contactsForm input, .contactsForm textarea {
+                width: 100%;
+            }
+
+            .submitBtn {
+                padding: 10px 20px;
+                background-color: darkgray;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

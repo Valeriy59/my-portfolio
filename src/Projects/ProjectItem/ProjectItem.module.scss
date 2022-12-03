@@ -1,0 +1,70 @@
+@import "src/Common/Styles/sass/variables";
+.projectItem {
+  margin: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: $bgSecondColor;
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-color: $bgSecondColor;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.4;
+    }
+
+
+    .ref {
+      background-color: antiquewhite;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .projectInfo {
+    width: 80%;
+    margin-bottom: 30px;
+
+    .title {
+      font-family: 'Montserrat', sans-serif;
+      width: 100%;
+      font-weight: 500;
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: $titleSecondaryColor;
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+
+    .description {
+      color: $textColor;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+
+
