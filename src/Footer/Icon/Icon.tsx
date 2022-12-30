@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-// import {NavLink} from "react-router-dom";
+
 
 type IconPropsType = {
     icon: string
@@ -23,22 +23,15 @@ export const Icon = (props: IconPropsType) => {
         height: '27px',
         transition: '250ms',
         transform: `scale(${props.scale ? props.scale : 1}) translateY(${onHover ? '-5px' : '0'})`,
-        fill: `${onHover ? '#767676' : 'black'}`
+        fill: `${onHover ? '#767676' : '#494949'}`
     }
 
     return (
-        // props.linkStyle === 'link' ?
             <a href={props.link} target={'_blank'} onMouseOver={hoverTrue} onMouseLeave={hoverFalse}>
                 <svg style={IconStyle}>
                     <path
                         d={props.icon}/>
                 </svg>
             </a>
-// : <NavLink to={props.link}>
-//             {/*    <svg style={IconStyle}>*/}
-//             {/*        <path*/}
-//             {/*            d={props.icon}/>*/}
-//             {/*    </svg>*/}
-//             {/*</NavLink>*/}
     )
 }

@@ -1,10 +1,17 @@
-.nav {
-    width: 300px;
+@import "src/Common/Styles/sass/variables";
+.header {
+    height: 80px;
+    background-color: $bgColor;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    position: sticky;
 
 }
-
 .text {
     color: #777;
     text-decoration: none;

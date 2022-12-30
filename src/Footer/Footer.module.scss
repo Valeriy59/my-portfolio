@@ -2,6 +2,8 @@
 
 .footer {
     background-color: $bgColor;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     .footerContainer {
         justify-content: space-between;
@@ -19,7 +21,6 @@
 
         .socialIcons {
             width: 250px;
-            background-color: darkgray;
             display: flex;
             align-items: center;
             justify-content: space-between;

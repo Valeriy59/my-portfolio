@@ -37,16 +37,16 @@ export function Skills() {
 
 
     return (
-        <div className={styles.skillsBlock}>
+        <div id="Skills" className={styles.skillsBlock}>
             <div className={`${styleContainer.container} ${styles.skillsContainer}`}>
                 <Title title={"Skills"}/>
                 <div className={styles.skills}>
-                    <SkillItem style={js} title={'JS'} description={'JS text  text text text text'}/>
-                    <SkillItem style={react} title={'React'} description={'React text  text  text text text text'}/>
-                    <SkillItem style={html} title={'HTML'} description={'HTML text  text  text text text text'}/>
-                    <SkillItem style={redux} title={'Redux'} description={'Redux text text text text text text text text text text text'}/>
-                    <SkillItem style={mui} title={'MUI'} description={'MUI text text text text text text text text text text text'}/>
-                    <SkillItem style={css} title={'CSS'} description={'CSS text text text text text text text text text text text'}/>
+                    <SkillItem style={js} title={'JS'} description={'JS text'}/>
+                    <SkillItem style={react} title={'React'} description={'React text'}/>
+                    <SkillItem style={html} title={'HTML'} description={'HTML text'}/>
+                    <SkillItem style={redux} title={'Redux'} description={'Redux text'}/>
+                    <SkillItem style={mui} title={'MUI'} description={'MUI text'}/>
+                    <SkillItem style={css} title={'CSS'} description={'CSS text'}/>
                 </div>
             </div>
         </div>

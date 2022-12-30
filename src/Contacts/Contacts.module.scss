@@ -1,33 +1,132 @@
 @import "src/Common/Styles/sass/variables";
 
 .contactsBlock {
-    background-color: $bgSecondColor;
+  background-color: $bgSecondColor;
+
+  .contactsHeaderContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .text {
+      color: $textColor;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: 400;
+      margin: 0 0 15px;
+    }
 
     .contactsContainer {
-        flex-direction: column;
-        justify-content: flex-start;
+      width: 100%;
 
-        .contactsForm {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 50%;
-            background-color: lightpink;
+      .contactText {
+        list-style: none;
+        box-sizing: border-box;
+        width: 300px;
+        margin: 0;
+        padding: 0;
 
-            .contactsForm input, .contactsForm textarea {
-                width: 100%;
-            }
+        li {
+          margin-bottom: 25px;
 
-            .submitBtn {
-                padding: 10px 20px;
-                background-color: darkgray;
-            }
+          i {
+            border: 1px solid #a8a8a8;
+            border-radius: 50%;
+            float: left;
+            font-size: 24px;
+            height: 47px;
+            line-height: 47px;
+            margin-right: 12px;
+            text-align: center;
+            width: 47px;
+            color: #919191;
+          }
+
+          h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 19px;
+            line-height: 1.1;
+            font-weight: normal;
+            letter-spacing: 0;
+            color: $textColor;
+            margin: 0;
+          }
+
+          span, a {
+            color: $textColor;
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            width: 100%;
+            text-decoration: none;
+          }
         }
+      }
+
+      .contactsForm {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 600px;
+        height: max-content;
+        border: none;
+        flex-wrap: wrap;
+
+        textarea {
+          resize: none;
+          height: 150px;
+          width: 100%;
+          border: 1px solid #d9d9d9;
+        }
+
+        .input {
+          border: none;
+          border-bottom: 1px solid #d9d9d9;
+          display: block;
+          width: 280px;
+          height: calc(2.25rem + 2px);
+        }
+
+        .input, .textarea {
+          color: $textColor;
+          font-family: "Montserrat", sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          outline: none;
+          margin-bottom: 30px;
+        }
+
+        Button {
+          font-size: 14px;
+          font-family: "Montserrat", sans-serif;
+          background-color: #393939;
+          width: unset;
+          line-height: 40px;
+          cursor: pointer;
+          color: #f3f3f3;
+          padding: 0 30px;
+          transition: all .3s ease 0s;
+          text-transform: uppercase;
+          margin-bottom: 30px;
+        }
+      }
     }
+  }
 }
 
+@media screen and (max-width: 629px) {
+  .contactsForm {
+    width: 100%;
+  }
+}
 
-
+@media screen and (min-width: 630px) {
+  .contactsForm {
+    width: 50%;
+  }
+}
 
 
 

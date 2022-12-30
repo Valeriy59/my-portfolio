@@ -23,13 +23,13 @@ export function Projects() {
     }
 
     return (
-        <div className={styles.projectsBlock}>
+        <div id="Projects" className={styles.projectsBlock}>
             <div className={`${styleContainer.container} ${styles.projectsContainer}`}>
                 <Title title={"Projects"}/>
                 <div className={styles.projects}>
-                    <ProjectItem style={todolist} title={'TodoList'} description={'TodoList .TodoList TodoList TodoList TodoList TodoList TodoListTodoListTodoListTodoListTodoList;hj; s;afjlk;dfj'}/>
-                    <ProjectItem style={socialNetwork} title={'Social Network'} description={'Social Network ldshfj afskjh affhjk'}/>
-                    <ProjectItem style={counter} title={'Counter'} description={'Counter vksdhd text text text text text text text text text text text text text'}/>
+                    <ProjectItem style={todolist} title={'TodoList'} description={'Stack: React, Redux, React-redux, Redux-thunk, TypeScript, Axios, Material UI, Formik'}/>
+                    <ProjectItem style={socialNetwork} title={'Social Network'} description={'Stack: React, Redux, React-redux, Redux-thunk, TypeScript, React-router-dom, Axios, Redux-form, Reselect'}/>
+                    <ProjectItem style={counter} title={'Counter'} description={'Stack: React, Redux, TypeScript, Material UI'}/>
                 </div>
             </div>
         </div>
