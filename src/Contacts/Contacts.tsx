@@ -22,7 +22,6 @@ function Contacts() {
         <div id='Contacts' className={styles.contactsBlock}>
             <div className={`${styleContainer.container} ${styles.contactsHeaderContainer}`}>
                 <Title title={"Let's get in touch"}/>
-
                 <span className={styles.text}>Always available for freelancing if the right project comes along, Feel free to contact me.</span>
                 <div className={`${styleContainer.container} ${styles.contactsContainer}`}>
                     <Fade left>
@@ -73,3 +72,37 @@ function Contacts() {
 }
 
 export default Contacts;
+
+
+
+
+// import React, { useRef } from 'react';
+// import emailjs from '@emailjs/browser';
+//
+//  const Contacts = () => {
+//     const form = useRef<HTMLFormElement>(null);
+//
+//     const sendEmail = (e:any) => {
+//         e.preventDefault();
+//
+//         emailjs.sendForm('service_bgygxzd', 'template_16d6sjm', form.current ? form.current : '', 'XPaISRUsejr1bTRpu')
+//             .then((result) => {
+//                 console.log(result.text);
+//             }, (error) => {
+//                 console.log(error.text);
+//             });
+//     };
+//
+//     return (
+//         <form ref={form} onSubmit={sendEmail}>
+//             <label>Name</label>
+//             <input type="text" name="user_name" />
+//             <label>Email</label>
+//             <input type="email" name="user_email" />
+//             <label>Message</label>
+//             <textarea name="message" />
+//             <input type="submit" value="Send" />
+//         </form>
+//     );
+// };
+// export default Contacts;
