@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/css/main.f2b912bd.css",
-    "main.js": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/js/main.53e59d6c.js",
-    "static/js/787.128fc6e9.chunk.js": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/js/787.128fc6e9.chunk.js",
-    "static/media/socialNetworkImg2.jpg": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/media/socialNetworkImg2.d9044d44e9a04a33bac1.jpg",
-    "static/media/Photo2.png": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/media/Photo2.164c34e63de62901d923.png",
-    "static/media/todolistImg1.jpg": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/media/todolistImg1.1653a02729e97ae04f23.jpg",
-    "static/media/counterImg.jpg": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/media/counterImg.273b5f0d1ffb3312ee27.jpg",
-    "static/media/cssImg.svg": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/media/cssImg.41400e0a3a489749f61a4359ed2f97bd.svg",
-    "static/media/htmlImg.svg": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/media/htmlImg.da66747ec09aeb0b9f0ac633d66666b9.svg",
-    "static/media/reactImg.svg": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/media/reactImg.3f2da6d51d61fe66f4b61282ac4d26cc.svg",
-    "static/media/jsImg.svg": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/media/jsImg.7e32b28c5715c0c317ee492fae5276a1.svg",
-    "static/media/reduxImg.svg": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/media/reduxImg.07bb04bbd2f345e11e1d66529b90580e.svg",
-    "index.html": "/Valeriy59/Valeriy59.portfolio.github.io.git/index.html",
-    "static/media/muiImg.svg": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/media/muiImg.720f89e823f5301b8552007eb6cece98.svg",
-    "main.f2b912bd.css.map": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/css/main.f2b912bd.css.map",
-    "main.53e59d6c.js.map": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/js/main.53e59d6c.js.map",
-    "787.128fc6e9.chunk.js.map": "/Valeriy59/Valeriy59.portfolio.github.io.git/static/js/787.128fc6e9.chunk.js.map"
+    "main.css": "/my-portfolio/static/css/main.1a7f2e60.css",
+    "main.js": "/my-portfolio/static/js/main.ba9c742a.js",
+    "static/js/787.128fc6e9.chunk.js": "/my-portfolio/static/js/787.128fc6e9.chunk.js",
+    "static/media/socialNetworkImg2.jpg": "/my-portfolio/static/media/socialNetworkImg2.d9044d44e9a04a33bac1.jpg",
+    "static/media/Photo2.png": "/my-portfolio/static/media/Photo2.164c34e63de62901d923.png",
+    "static/media/todolistImg1.jpg": "/my-portfolio/static/media/todolistImg1.1653a02729e97ae04f23.jpg",
+    "static/media/counterImg.jpg": "/my-portfolio/static/media/counterImg.273b5f0d1ffb3312ee27.jpg",
+    "static/media/cssImg.svg": "/my-portfolio/static/media/cssImg.41400e0a3a489749f61a4359ed2f97bd.svg",
+    "static/media/htmlImg.svg": "/my-portfolio/static/media/htmlImg.da66747ec09aeb0b9f0ac633d66666b9.svg",
+    "static/media/reactImg.svg": "/my-portfolio/static/media/reactImg.3f2da6d51d61fe66f4b61282ac4d26cc.svg",
+    "static/media/jsImg.svg": "/my-portfolio/static/media/jsImg.7e32b28c5715c0c317ee492fae5276a1.svg",
+    "static/media/reduxImg.svg": "/my-portfolio/static/media/reduxImg.07bb04bbd2f345e11e1d66529b90580e.svg",
+    "index.html": "/my-portfolio/index.html",
+    "static/media/muiImg.svg": "/my-portfolio/static/media/muiImg.720f89e823f5301b8552007eb6cece98.svg",
+    "main.1a7f2e60.css.map": "/my-portfolio/static/css/main.1a7f2e60.css.map",
+    "main.ba9c742a.js.map": "/my-portfolio/static/js/main.ba9c742a.js.map",
+    "787.128fc6e9.chunk.js.map": "/my-portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2b912bd.css",
-    "static/js/main.53e59d6c.js"
+    "static/css/main.1a7f2e60.css",
+    "static/js/main.ba9c742a.js"
   ]
 }
