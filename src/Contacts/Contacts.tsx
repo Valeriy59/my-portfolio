@@ -1,21 +1,66 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styles from './Contacts.module.scss'
 import styleContainer from '../Common/Styles/Container.module.css'
 import Title from "../Common/Components/Title/Title"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faPhone, faEnvelope, faUniversity} from '@fortawesome/free-solid-svg-icons'
-import {Button, Grid, Input, Slide, TextField, withStyles} from "@mui/material";
+import emailjs from '@emailjs/browser';
+import {useFormik} from 'formik';
 
 
-
+interface Values {
+    name: string;
+    email: string;
+    message: string;
+}
 
 function Contacts() {
-    const textFieldStyles = (theme: any) => ({
-        notchedOutline: {
-            borderWidth: "1px",
-            borderColor: "yellow !important"
+
+    type FormikErrorType = {
+        name?: string
+        email?: string
+        message?: string
+    }
+
+    const form = useRef<HTMLFormElement>(null);
+
+    const formik = useFormik<Values>({
+        initialValues: {
+            name: '',
+            email: '',
+            message: ''
+        },
+        validate: (values) => {
+            const errors: FormikErrorType = {}
+            if (!values.email) {
+                errors.email = 'Required'
+            } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+                errors.email = 'Invalid email address'
+            }
+            if (!values.name) {
+                errors.name = 'Required'
+            } else if (values.name.length<=3) {
+                errors.name = 'Name length must be more than 3 symbols '
+            }
+            if (!values.message) {
+                errors.message = 'Required'
+            } else if (values.message.length<=10) {
+                errors.message = 'Message length must be more than 10 symbols '
+            }
+            return errors
+        },
+        onSubmit: (values) => {
+            emailjs.sendForm('service_bgygxzd', 'template_16d6sjm', form.current ? form.current : '', 'XPaISRUsejr1bTRpu')
+                .then((result) => {
+                    alert('Message sent')
+                }, (error) => {
+                    alert('Something went wrong')
+                })
+                .finally(() => formik.resetForm())
+
         }
-    });
+    })
+
     const Fade = require("react-reveal/Fade");
 
     return (
@@ -40,69 +85,40 @@ function Contacts() {
                             </li>
                         </ul>
                     </Fade>
-                    <Fade right>
-                        {/*<form action="mailto:litvinovval@gmail.com" className={styles.contactsForm}>*/}
-                        {/*<Grid container spacing={1}>*/}
-                        {/*    <Grid xs={12} sm={6} item>*/}
-
-                        {/*        <TextField InputProps={{ disableUnderline: true }} className={styles.input} placeholder={'Your Name'} variant="standard" fullWidth required/>*/}
-                        {/*    </Grid>*/}
-                        {/*    <Grid xs={12} sm={6} item>*/}
-                        {/*        <TextField InputProps={{ disableUnderline: true }}className={styles.input} type={'email'} placeholder={'Your Email'} variant="standard" fullWidth required/>*/}
-                        {/*    </Grid>*/}
-                        {/*    <Grid xs={12} item>*/}
-                        {/*        <TextField InputProps={{ disableUnderline: true }} className={styles.textarea} multiline rows={8} placeholder={'Your message'} variant="outlined" fullWidth required/>*/}
-                        {/*    </Grid>*/}
-                        {/*    <Grid xs={12} item>*/}
-                        {/*        <Button type={'submit'} variant={'contained'} color={'primary'} >Send Message</Button>*/}
-                        {/*    </Grid>*/}
-                        {/*</Grid>*/}
-                        {/*</form>*/}
-                        <form action="mailto:litvinovval@gmail.com" className={styles.contactsForm}>
-                            <input className={styles.input} type={'text'} placeholder={'Your Name'} required/>
-                            <input className={styles.input} type={'email'} placeholder={'Your Email'} required/>
-                            <textarea className={styles.textarea} placeholder={'Your message'} required></textarea>
-                            <button className={styles.submitBtn} type={"submit"}>Send Message</button>
+                        <form ref={form} onSubmit={formik.handleSubmit} className={styles.contactsForm}>
+                            <input
+                                className={styles.input}
+                                type={'text'}
+                                placeholder={'Your Name'}
+                                required
+                                {...formik.getFieldProps("name")}
+                            />
+                            {formik.touched.name && formik.errors.name && <div style={{color: 'red'}}>{formik.errors.name}</div>}
+                            <input
+                                className={styles.input}
+                                type={'email'}
+                                placeholder={'Your Email'}
+                                required
+                                {...formik.getFieldProps("email")}
+                            />
+                            {formik.touched.email && formik.errors.email && <div style={{color: 'red'}}>{formik.errors.email}</div>}
+                            <textarea
+                                className={styles.textarea}
+                                placeholder={'Your message'}
+                                required
+                                {...formik.getFieldProps("message")}>
+                            </textarea>
+                            {formik.touched.message && formik.errors.message && <div style={{color: 'red'}}>{formik.errors.message}</div>}
+                            <button
+                                className={styles.submitBtn}
+                                type={"submit"} value="Send" >
+                                Send Message
+                            </button>
                         </form>
-                    </Fade>
                 </div>
             </div>
         </div>
     );
 }
 
-export default Contacts;
-
-
-
-
-// import React, { useRef } from 'react';
-// import emailjs from '@emailjs/browser';
-//
-//  const Contacts = () => {
-//     const form = useRef<HTMLFormElement>(null);
-//
-//     const sendEmail = (e:any) => {
-//         e.preventDefault();
-//
-//         emailjs.sendForm('service_bgygxzd', 'template_16d6sjm', form.current ? form.current : '', 'XPaISRUsejr1bTRpu')
-//             .then((result) => {
-//                 console.log(result.text);
-//             }, (error) => {
-//                 console.log(error.text);
-//             });
-//     };
-//
-//     return (
-//         <form ref={form} onSubmit={sendEmail}>
-//             <label>Name</label>
-//             <input type="text" name="user_name" />
-//             <label>Email</label>
-//             <input type="email" name="user_email" />
-//             <label>Message</label>
-//             <textarea name="message" />
-//             <input type="submit" value="Send" />
-//         </form>
-//     );
-// };
-// export default Contacts;
+export default Contacts

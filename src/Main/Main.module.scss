@@ -22,6 +22,7 @@
             }
         }
         .greeting {
+            font-family: "Montserrat", sans-serif;
             color: #919191;
             letter-spacing: 1px;
             margin: 0 0 15px;
@@ -29,6 +30,9 @@
             line-height: 1.1;
             font-size: 18px;
             text-transform: uppercase;
+            @media screen and (max-width: 415px) {
+                font-size: 13px;
+            }
         }
         .text {
             font-family: "Montserrat", sans-serif;
@@ -38,6 +42,7 @@
             font-weight: 400;
             margin: 0 0 15px;
             @media screen and (max-width: 415px) {
+                font-family: "Montserrat", sans-serif;
                 font-size: 12px;
             }
         }
