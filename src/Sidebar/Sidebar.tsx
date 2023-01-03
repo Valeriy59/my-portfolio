@@ -28,7 +28,7 @@ function Sidebar(props: PropsType) {
                                     className={styles.text}
                                     spy={true}
                                     smooth={true}
-                                    offset={-75}
+                                    offset={-1}
                                     duration={500}
                                 >{item.name}</Link>
                             </ListItemButton>
