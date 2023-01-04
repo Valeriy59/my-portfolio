@@ -38,13 +38,11 @@ function Header() {
                         >
                             <MenuIcon style={{color: "#393939"}}/>
                         </IconButton>
-
                         <Typography
                             variant="h6"
                             component="div"
                             sx={{flexGrow: 1, display: {xs: 'none', sm: 'block'}}}
                         >
-                            Mim
                         </Typography>
                         <Box sx={{display: {xs: 'none', sm: 'block'}}}>
                             {navLinks.map((item) => (
@@ -55,7 +53,7 @@ function Header() {
                                         className={styles.text}
                                         spy={true}
                                         smooth={true}
-                                        offset={-75}
+                                        offset={-1}
                                         duration={500}
                                     >{item.name}</Link>
                                 </Button>

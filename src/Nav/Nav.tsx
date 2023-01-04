@@ -32,7 +32,7 @@ function Nav() {
                         activeClass={styles.active}
                         spy={true}
                         smooth={true}
-                        offset={1}
+                        offset={-1}
                         duration={500}
                     >{nl.name}</Link>
                 ))
