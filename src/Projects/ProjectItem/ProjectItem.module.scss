@@ -7,7 +7,7 @@
   align-items: center;
   text-align: center;
   background-color: $bgSecondColor;
-
+  overflow: hidden;
   .icon {
     display: flex;
     justify-content: center;
@@ -17,23 +17,34 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    transition: 1s; /* Время эффекта */
+    &:hover {
+      transform: scale(1.1);
 
-    &::before {
-      position: absolute;
-      content: '';
-      background-color: $bgSecondColor;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      opacity: 0.4;
-    }
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: $bgSecondColor;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.6;
 
+      }
 
-    .ref {
-      background-color: antiquewhite;
-      position: relative;
-      z-index: 1;
+      .ref {
+        position: relative;
+        cursor: pointer;
+        background: rgba(73,73,73,.35) none repeat scroll 0 0;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        .focusIcon {
+          visibility: visible;
+          padding-top: 12px;
+        }
+      }
     }
   }
 

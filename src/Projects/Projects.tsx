@@ -12,24 +12,51 @@ export type ProjectType = {
 }
 
 export function Projects() {
-    const socialNetwork = {
-        backgroundImage: `url(${socialNetworkImg})`
-    }
-    const todolist = {
-        backgroundImage: `url(${todolistImg})`
-    }
-    const counter = {
-        backgroundImage: `url(${counterImg})`
-    }
+    const projectItems = [
+        {
+            title: 'TodoList',
+            link: 'https://valeriy59.github.io/todolist',
+            description: 'Stack: React, Redux, React-redux, Redux-thunk, TypeScript, Axios, Material UI, Formik',
+            style: {
+                backgroundImage: `url(${todolistImg})`
+            }
+        },
+        {
+            title: 'Social Network',
+            link: 'https://valeriy59.github.io/social-network',
+            description: 'Stack: React, Redux, TypeScript, Material UI',
+            style: {
+                backgroundImage: `url(${socialNetworkImg})`
+            }
+        },
+        {
+            title: 'Counter',
+            link: 'https://valeriy59.github.io/counter-redux',
+            description: 'Stack: React, Redux, TypeScript, Material UI',
+            style: {
+                backgroundImage: `url(${counterImg})`
+            }
+        }
+    ]
+    // const socialNetwork = {
+    //     backgroundImage: `url(${socialNetworkImg})`
+    // }
+    // const todolist = {
+    //     backgroundImage: `url(${todolistImg})`
+    // }
+    // const counter = {
+    //     backgroundImage: `url(${counterImg})`
+    // }
 
     return (
         <div id="Projects" className={styles.projectsBlock}>
             <div className={`${styleContainer.container} ${styles.projectsContainer}`}>
                 <Title title={"Projects"}/>
                 <div className={styles.projects}>
-                    <ProjectItem style={todolist} title={'TodoList'} description={'Stack: React, Redux, React-redux, Redux-thunk, TypeScript, Axios, Material UI, Formik'}/>
-                    <ProjectItem style={socialNetwork} title={'Social Network'} description={'Stack: React, Redux, React-redux, Redux-thunk, TypeScript, React-router-dom, Axios, Redux-form, Reselect'}/>
-                    <ProjectItem style={counter} title={'Counter'} description={'Stack: React, Redux, TypeScript, Material UI'}/>
+                    {projectItems.map( item => <ProjectItem title={item.title} style={item.style} link={item.link} description={item.description}/>)}
+                    {/*<ProjectItem style={todolist} title={'TodoList'} description={'Stack: React, Redux, React-redux, Redux-thunk, TypeScript, Axios, Material UI, Formik'}/>*/}
+                    {/*<ProjectItem style={socialNetwork} title={'Social Network'} description={'Stack: React, Redux, React-redux, Redux-thunk, TypeScript, React-router-dom, Axios, Redux-form, Reselect'}/>*/}
+                    {/*<ProjectItem style={counter} title={'Counter'} description={'Stack: React, Redux, TypeScript, Material UI'}/>*/}
                 </div>
             </div>
         </div>
