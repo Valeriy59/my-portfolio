@@ -23,7 +23,7 @@ export function Projects() {
         },
         {
             title: 'Social Network',
-            link: 'https://valeriy59.github.io/social-network',
+            link: 'https://valeriy59.github.io/social-network-ts',
             description: 'Stack: React, Redux, TypeScript, Material UI',
             style: {
                 backgroundImage: `url(${socialNetworkImg})`
