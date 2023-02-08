@@ -6,6 +6,7 @@ import Title from "../Common/Components/Title/Title";
 import socialNetworkImg from ".././Assets/Image/socialNetworkImg2.jpg"
 import todolistImg from ".././Assets/Image/todolistImg1.jpg"
 import counterImg from ".././Assets/Image/counterImg.jpg"
+import cardsImg from ".././Assets/Image/cards.jpg"
 
 export type ProjectType = {
     backgroundImage: string
@@ -19,6 +20,14 @@ export function Projects() {
             description: 'Stack: React, Redux, React-redux, Redux-thunk, TypeScript, Axios, Material UI, Formik',
             style: {
                 backgroundImage: `url(${todolistImg})`
+            }
+        },
+        {
+            title: 'Learning Cards',
+            link: 'https://amnesia322.github.io/project',
+            description: 'Stack: React, Redux, Redux-thunk, TypeScript, Axios, Material UI, Formik',
+            style: {
+                backgroundImage: `url(${cardsImg})`
             }
         },
         {
@@ -38,15 +47,6 @@ export function Projects() {
             }
         }
     ]
-    // const socialNetwork = {
-    //     backgroundImage: `url(${socialNetworkImg})`
-    // }
-    // const todolist = {
-    //     backgroundImage: `url(${todolistImg})`
-    // }
-    // const counter = {
-    //     backgroundImage: `url(${counterImg})`
-    // }
 
     return (
         <div id="Projects" className={styles.projectsBlock}>
@@ -54,9 +54,6 @@ export function Projects() {
                 <Title title={"Projects"}/>
                 <div className={styles.projects}>
                     {projectItems.map( item => <ProjectItem title={item.title} style={item.style} link={item.link} description={item.description}/>)}
-                    {/*<ProjectItem style={todolist} title={'TodoList'} description={'Stack: React, Redux, React-redux, Redux-thunk, TypeScript, Axios, Material UI, Formik'}/>*/}
-                    {/*<ProjectItem style={socialNetwork} title={'Social Network'} description={'Stack: React, Redux, React-redux, Redux-thunk, TypeScript, React-router-dom, Axios, Redux-form, Reselect'}/>*/}
-                    {/*<ProjectItem style={counter} title={'Counter'} description={'Stack: React, Redux, TypeScript, Material UI'}/>*/}
                 </div>
             </div>
         </div>

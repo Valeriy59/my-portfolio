@@ -2,6 +2,7 @@
 
 .mainBlock {
     height: 100vh;
+    flex-wrap: wrap;
     background-color: $bgColor;
     .textBox {
         width: 650px;

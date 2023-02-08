@@ -41,12 +41,12 @@ export function Skills() {
             <div className={`${styleContainer.container} ${styles.skillsContainer}`}>
                 <Title title={"Skills"}/>
                 <div className={styles.skills}>
-                    <SkillItem style={js} title={'JS'} description={'JS text'}/>
-                    <SkillItem style={react} title={'React'} description={'React text'}/>
-                    <SkillItem style={html} title={'HTML'} description={'HTML text'}/>
-                    <SkillItem style={redux} title={'Redux'} description={'Redux text'}/>
-                    <SkillItem style={mui} title={'MUI'} description={'MUI text'}/>
-                    <SkillItem style={css} title={'CSS'} description={'CSS text'}/>
+                    <SkillItem style={js} title={'JS'} description={'Native JS'}/>
+                    <SkillItem style={react} title={'React'} description={'React library for SPA'}/>
+                    <SkillItem style={html} title={'HTML'} description={'HTML structure the app'}/>
+                    <SkillItem style={redux} title={'Redux'} description={'Redux store management'}/>
+                    <SkillItem style={mui} title={'MUI'} description={'MUI components'}/>
+                    <SkillItem style={css} title={'CSS'} description={'CSS styling the app'}/>
                 </div>
             </div>
         </div>
