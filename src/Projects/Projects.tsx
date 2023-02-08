@@ -6,7 +6,7 @@ import Title from "../Common/Components/Title/Title";
 import socialNetworkImg from ".././Assets/Image/socialNetworkImg2.jpg"
 import todolistImg from ".././Assets/Image/todolistImg1.jpg"
 import counterImg from ".././Assets/Image/counterImg.jpg"
-import cardsImg from ".././Assets/Image/cards.jpg"
+import cardsImg from ".././Assets/Image/cards.jpeg"
 
 export type ProjectType = {
     backgroundImage: string
